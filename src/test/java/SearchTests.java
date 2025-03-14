@@ -6,9 +6,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTests {
     @Test
-    void successfulSearchTest() {
-        open("https://www.mail.ru/");
-        $("[name=q]").setValue("selenide").pressEnter();
-        $("[id=search]").shouldHave(text("https://selenide.org"));
+    void fillFields() {
+        open("https://demoqa.com/text-box");
+        $("#userName").setValue("User");
+        $("#userEmail").setValue("User@mail.ru");
+        $("#currentAddress").setValue("Калининград");
+        $("#permanentAddress").setValue("Москва");
+        $("#submit").click();
+        $("#output").shouldHave(text("User"),text("User@mail.ru"),text("Калининград"),text("Москва"));
     }
 }
