@@ -1,14 +1,11 @@
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.files.DownloadActions.click;
 
-public class CssXpathHomework {
+public class cssXpathHomework {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize="1920x1080";
@@ -21,7 +18,7 @@ public class CssXpathHomework {
         $("#lastName").setValue("Surname");
         $("#userEmail").setValue("Email@mail.ru");
         $x("//label[@for='gender-radio-2']").click();
-        $()
+        //$()
         $("#userNumber").setValue("79111111111");
         $x("//label[@for='hobbies-checkbox-1']").click();
         $x("//label[@for='hobbies-checkbox-2']").click();
@@ -32,11 +29,6 @@ public class CssXpathHomework {
         $("#city").click();
         $(byText("Merrut")).click();
         $("#currentAddress").setValue("Kaliningrad");
-
-
-
     }
-
-
-    }
+}
 
